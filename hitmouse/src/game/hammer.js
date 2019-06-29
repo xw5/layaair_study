@@ -12,7 +12,7 @@ export default class hammer extends Laya.Script {
     }
 
     onStart() {
-        this.play_hammer_anim();
+        //this.play_hammer_anim();
     }
 
     play_hammer_anim() {
@@ -20,8 +20,8 @@ export default class hammer extends Laya.Script {
         this.owner.alpha = 1;
         this.owner.rotation = 0;
 
-        this.time_line = Laya.TimeLine.to(this.owner,{rotation:9}, time, null, 1000);
-        this.time_line.to(this.owner,{rotation:-9}, time * 2);
+        this.time_line = Laya.TimeLine.to(this.owner,{rotation:18}, time, null);
+        this.time_line.to(this.owner,{rotation:-15}, time * 2);
         this.time_line.to(this.owner,{rotation:0}, time);
         this.time_line.to(this.owner,{alpha:0}, time);
         this.time_line.play(0, false);
